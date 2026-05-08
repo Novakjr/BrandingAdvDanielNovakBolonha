@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Hanrick - Portfolio</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar for contact info -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="name">Richard Hanrick</h1>
+                <p class="title">Full Stack Developer</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope icon-amber"></i>
+                    <span>richard@example.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone icon-amber"></i>
+                    <span>+1 (123) 456-7890</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt icon-amber"></i>
+                    <span>New York, NY</span>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github icon-amber"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin icon-amber"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter icon-amber"></i></a>
+            </div>
+        </aside>
+
+        <!-- Main content area -->
+        <main class="main">
+            <!-- Top navigation -->
+            <nav class="top-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#resume" class="nav-link">Resume</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- About Me Section -->
+            <section id="about" class="section about-section">
+                <div class="section-header">
+                    <h2>About Me</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="about-content">
+                    <div class="profile-image">
+                        <img src="profile.jpg" alt="Richard Hanrick" class="profile-img">
+                    </div>
+                    <div class="about-text">
+                        <p>I'm a passionate full-stack developer with experience in modern web technologies. I love creating beautiful, responsive websites and applications that solve real-world problems.</p>
+                        <p>Currently focused on JavaScript frameworks, Node.js, and cloud services.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What I'm Doing Section -->
+            <section id="resume" class="section">
+                <div class="section-header">
+                    <h2>What I'm Doing</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-code icon-amber large"></i>
+                        <h3>Frontend Development</h3>
+                        <p>React, Vue.js, HTML5, CSS3, Tailwind</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-server icon-amber large"></i>
+                        <h3>Backend Development</h3>
+                        <p>Node.js, Express, Python, Django</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database icon-amber large"></i>
+                        <h3>Databases</h3>
+                        <p>MongoDB, PostgreSQL, Redis</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Placeholder sections -->
+            <section id="portfolio" class="section">
+                <div class="section-header">
+                    <h2>Portfolio</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <p>Portfolio projects will go here.</p>
+            </section>
+
+            <section id="blog" class="section">
+                <div class="section-header">
+                    <h2>Blog</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <p>Blog posts will go here.</p>
+            </section>
+
+            <section id="contact" class="section">
+                <div class="section-header">
+                    <h2>Contact</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Simple smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
